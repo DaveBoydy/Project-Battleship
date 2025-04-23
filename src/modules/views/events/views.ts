@@ -1,13 +1,21 @@
+import globalState from '../../models/states/global'
 import start from '../../controllers/start'
+import setup from '../../controllers/setup'
 
 addEventListener('DOMContentLoaded', () => {
   start.addTitleScreen()
   document.body.addEventListener('click', event => {
     const target = event.target as HTMLElement
 
-    // switch screen
+    // switch to setup screen
     if (target.id === 'battleship-start') {
-      console.log('Switch to next screen')
+      start.removeTitleScreen()
+      setup.addSetupScreen()
+    }
+
+    // switch to battle screen
+    if (target.id === 'launch-fleet' && globalState.deployComplete === true) {
+      console.table('switch screen')
     }
   })
 })

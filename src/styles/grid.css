@@ -1,0 +1,107 @@
+.cell {
+  display: table-cell;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  width: 32px;
+  height: 32px;
+}
+.cell:hover {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+}
+.row {
+  display: table-row;
+}
+.table {
+  display: table;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  max-width: 320px;
+}
+
+.beacon {
+  background-color: rgb(74 222 128); /* bg-green-400 */
+}
+
+.beacon:hover {
+  background-color: hsl(142, 61%, 54%); /* bg-green-400 */
+}
+
+.launch-button {
+  width: 318px;
+  background-color: rgb(199, 0, 0);
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.5rem;
+  cursor: not-allowed;
+  margin-left: 30px;
+}
+
+.launch-ready:active {
+  transform: scale(0.99);
+}
+
+.launch-ready {
+  color: white;
+  background-color: rgb(68, 206, 119);
+  cursor: pointer;
+}
+
+#setup-grid,
+#battle-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+#battle-grid .table {
+  cursor: crosshair;
+}
+
+#x-alpha-axis {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-axis {
+  margin-left: 12px;
+  min-width: 300px;
+  display: flex;
+}
+
+.inner-axis span {
+  flex: 0 0 32px;
+}
+
+#y-numeric-axis {
+  flex: 0 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#y-numeric-axis span {
+  flex: 0 0 100%;
+  margin-top: 3px;
+}
+
+.hit-landed {
+  background-color: rgb(255, 4, 4);
+  color: white;
+}
+
+.landed-hit {
+  color: red;
+}
+
+.hit-landed:hover,
+.landed-hit:hover {
+  background-color: rgb(255, 4, 4);
+  color: white;
+}
+
+.missed-target {
+  color: green;
+}
