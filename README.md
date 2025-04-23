@@ -1,2 +1,2 @@
-# TS-dev-template
-Template repository for a typescript dev stack E.G. webpack, jest, husky etc.
+# Project: Battleship
+Part of The Odin Project curriculum. Designed for practicing Test Driven Development (TDD).
